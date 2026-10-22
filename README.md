@@ -47,3 +47,12 @@ Les [DISCLAIMER.txt](DISCLAIMER.txt) og [LICENSE](LICENSE) før bruk.
 GPL-3.0-or-later. Programmet ble utviklet med bistand fra
 AI-verktøy; se NOTICE og kildenes attribusjoner. Frivillig støtte
 er tilgjengelig gjennom pluginens eksisterende lenke.
+
+## Support
+
+If this project has been useful to you and you would like to support further testing, documentation, and development, you can buy me a coffee:
+
+[☕ Buy me a coffee](https://buymeacoffee.com/tb_rtk)
+
+Support is completely optional and is greatly appreciated.
+
