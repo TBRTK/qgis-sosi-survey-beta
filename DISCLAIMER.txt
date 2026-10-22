@@ -1,0 +1,66 @@
+SOSI Survey – EKSPERIMENTELL BETAVERSJON
+
+BRUKES PÅ EGET ANSVAR.
+
+SOSI Survey er et hjelpemiddel under utvikling. Import, geometribehandling,
+koordinater, høyder, SOSI-egenskaper, eksportfiler og kontrollrapporter kan
+inneholde feil eller mangler. At en intern kontroll viser «BESTÅTT», betyr
+ikke at data er faglig korrekte eller godkjent av Kartverket, en kommune,
+en annen mottaker eller QGIS-prosjektet.
+
+Brukeren må selv kontrollere resultatene mot originalmålingene,
+riktig koordinat- og høydegrunnlag, gjeldende SOSI-produktspesifikasjon,
+mottakerens leveransekrav og relevant regelverk. Bruk også et uavhengig
+SOSI-kontrollprogram før data leveres. Ikke bruk utkastet som eneste grunnlag
+for byggesaker, grensefastsetting, anleggsstikning eller andre kritiske
+beslutninger.
+
+Programvaren leveres «som den er» (AS IS), uten garanti av noe slag.
+Utvikler og bidragsytere fraskriver seg ansvar for feil, feilbruk, datatap,
+økonomisk tap, avbrudd og direkte eller indirekte skade i den utstrekning
+dette lovlig kan fraskrives. Ansvarsfraskrivelse og ansvarsbegrensning
+gjelder bare i det omfang GPLv3 §§ 15–17 og gjeldende rett tillater.
+Lovbestemt ansvar som ikke lovlig kan fraskrives, er ikke utelukket.
+
+Importer og eksporter behandles lokalt i QGIS. Lokale prosjektfiler,
+SOSI-filer, kontrollrapporter og feilskjermbilder kan inneholde fortrolige
+måledata, koordinater, ID-er og filstier. Ikke legg slikt materiale i åpne
+GitHub-saker, testgrupper eller offentlige repoer. Fjern/anonymiser
+opplysningene før tilbakemelding. Eksterne hjelpelinker åpnes bare når
+brukeren selv velger dem.
+
+Lisens: GPL-3.0-or-later, se LICENSE. Full ansvarsfraskrivelse,
+ansvarsbegrensning og lovvalg følger GPLv3 §§ 15–17.
+https://www.gnu.org/licenses/gpl-3.0.html#section15
+
+---
+
+SOSI Survey – EXPERIMENTAL BETA
+
+USE AT YOUR OWN RISK.
+
+SOSI Survey is an experimental tool. Import, geometry, coordinates,
+elevations, attributes, exported SOSI data and internal reports may contain
+errors. A successful internal check is not proof of compliance with any
+official SOSI product specification or acceptance by Kartverket, a
+municipality, other recipient or the QGIS project.
+
+You must independently verify all input and output against original survey
+observations, the correct horizontal and vertical reference systems,
+applicable product specifications, recipient requirements and law.
+Perform independent SOSI validation before submitting any file. Do not
+rely on this beta as the sole basis for critical cadastral, engineering,
+construction or regulatory decisions.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY. The developer and
+contributors disclaim warranty and liability for errors, misuse, data
+loss, financial loss, service interruption and direct or indirect damage
+only to the extent permitted by GPLv3 sections 15–17 and applicable law.
+This does not exclude statutory liability that cannot legally be excluded.
+
+Survey files, project files, reports and screenshots can include confidential
+coordinates, identifiers and local paths. Do not post these materials in
+public bug reports. Sanitize feedback before sending it.
+
+License: GPL-3.0-or-later. See LICENSE and GPLv3 sections 15–17:
+https://www.gnu.org/licenses/gpl-3.0.html#section15

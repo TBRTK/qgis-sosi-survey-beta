@@ -1,0 +1,26 @@
+SOSI Survey – experimental QGIS plugin.
+Project source developed with AI assistance. SPDX-License-Identifier: GPL-3.0-or-later.
+See LICENSE for the full license and warranty disclaimer.
+
+QGIS, Qt, PyQt, GDAL and FYBA are external runtime dependencies, not bundled.
+Their names and SOSI refer to the respective external projects and standard.
+This plugin is not endorsed or certified by QGIS, Kartverket or utility owners.
+Only synthetic survey fixtures are included.
+
+BETA: Brukes på eget ansvar. Ingen garanti for korrekt SOSI, kart,
+koordinater, høyder eller godkjent leveranse. Brukeren har ansvaret for
+uavhengig kontroll av data og eksport før bruk eller innsending.
+Utvikler og bidragsytere er ikke ansvarlige for feil, tap eller skade
+utover det som ikke lovlig kan fraskrives. Se DISCLAIMER.txt og LICENSE.
+
+Optional support: https://buymeacoffee.com/tb_rtk
+
+Programvaren leveres «som den er» (AS IS), uten garanti. Ansvarsfraskrivelse
+og ansvarsbegrensning gjelder bare i det omfang GPLv3 §§15–17 og gjeldende rett
+tillater. Lovbestemt ansvar som ikke lovlig kan fraskrives, er ikke utelukket.
+Se LICENSE.
+
+The software is provided "AS IS", without warranty. Disclaimers and limitations
+of liability apply only to the extent permitted by GPLv3 sections 15–17 and
+applicable law. This does not exclude statutory liability that cannot lawfully
+be excluded. See LICENSE.
