@@ -6,6 +6,8 @@ eller godkjent av Kartverket, QGIS eller noen kommune.
 
 ## Kom i gang
 
+Se intro på youtube https://youtu.be/IsYCNBQ8hkk?si=oaQAC-hcu8RcjLrd
+
 Begynn med **[Installasjon – steg for steg](INSTALLASJON.md)**.
 Bruk QGIS 3.44 til den første testen. Installer ferdig
 `sosi_survey-0.5.10.zip` via QGIS **Utvidelser → Administrer
