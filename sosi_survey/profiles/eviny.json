@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "eviny_forberedelse",
+  "name": "Eviny – profilutkast, virksomhet må avklares",
+  "approved": false,
+  "require_z": true,
+  "compact_groups": {
+    "KVALITET": [
+      "MÅLEMETODE",
+      "NØYAKTIGHET",
+      "SYNBARHET",
+      "H-MÅLEMETODE",
+      "H-NØYAKTIGHET"
+    ]
+  },
+  "description": "Feltforberedelse. Eviny er et konsern; Termo/fjernvarme, produksjon og andre virksomheter kan ha ulike krav. BKK-regler overføres ikke automatisk til Eviny.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "Objekttype",
+      "type": "text",
+      "required": true,
+      "max_length": 32
+    },
+    {
+      "path": "DATAFANGSTDATO",
+      "label": "Datafangstdato",
+      "type": "date",
+      "required": true
+    },
+    {
+      "path": "KVALITET.MÅLEMETODE",
+      "label": "Målemetode (kode)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.NØYAKTIGHET",
+      "label": "Nøyaktighet i plan (cm)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-MÅLEMETODE",
+      "label": "Høydemålemetode (kode)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-NØYAKTIGHET",
+      "label": "Høydenøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  ],
+  "recipient": "Eviny",
+  "delivery_status": "IKKE LEVERANSEKLAR: juridisk mottaker, anleggstype og instruks er uavklart.",
+  "sources": [
+    {
+      "title": "Eviny – Om Eviny",
+      "url": "https://www.eviny.no/om-eviny",
+      "note": "Lest 2026-10-18. Konsernoversikt; ikke en innmålingsinstruks."
+    }
+  ],
+  "unresolved": [
+    "Hvilket Eviny-selskap og hvilket fagområde leveransen gjelder.",
+    "Gjeldende leveranseinstruks og revisjon, godkjent eksempelfil og mottakerens testimport.",
+    "Objekttyper, påkrevde egenskaper, kodelister, geometri og relasjoner per objekttype.",
+    "Avtalt filformat/SOSI-versjon, objektkatalog med versjon og tilhørende kontrollfiler.",
+    "Prosjektets koordinatsystem, høydegrunnlag, nøyaktighetskrav og krav til vedlegg."
+  ],
+  "manual_checks": [
+    "Bekreft riktig oppdragsgiver og leveransemottaker før feltoppsett velges."
+  ],
+  "reviewed_on": "2026-10-18",
+  "profile_revision": "2026-10-18.1"
+}

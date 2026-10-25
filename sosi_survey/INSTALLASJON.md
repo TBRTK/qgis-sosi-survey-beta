@@ -1,0 +1,81 @@
+# SOSI Survey – enkel installasjonsguide (for nybegynnere)
+
+**BETA – BRUKES PÅ EGET ANSVAR.** SOSI Survey er ikke offisielt godkjent
+av Kartverket eller QGIS. Intern kontroll erstatter ikke faglig SOSI-kontroll.
+Les DISCLAIMER.txt før bruk. Prøv først med syntetiske testdata.
+
+## Du trenger
+- En PC med **QGIS 3.44** (anbefalt til testgruppen, f.eks. 3.44.7).
+- Pluginfilen `sosi_survey-0.5.10.zip` fra utgiveren/testgruppen.
+- Du trenger **ikke** GitHub-konto for å installere en ZIP som er delt direkte.
+
+QGIS kan lastes ned fra https://qgis.org/download/.
+QGIS 4 kan være mulig, men alle funksjoner er ikke ferdig testet der.
+
+## Installer i QGIS – steg for steg
+
+1. **Last ned riktig ZIP.** Filen skal hete `sosi_survey-0.5.10.zip`.
+   *Ikke* velg GitHubs «Code → Download ZIP» (det er kildekoden,
+   ikke pluginens ferdig kontrollerte installasjonspakke).
+2. **Har du fått `sosi-survey-qgis-test.zip` fra GitHub Actions?**
+   Pakk ut akkurat denne **ytterste** ZIP-en. Da finner du
+   `sosi_survey-0.5.10.zip` inni. **Ikke pakk ut den innerste ZIP-en.**
+3. **Start QGIS.** Åpne menyen **Utvidelser → Administrer og installer utvidelser**.
+4. Velg **Installer fra ZIP** i menyen på venstre side.
+5. Trykk **… / Bla gjennom** og velg `sosi_survey-0.5.10.zip`.
+6. Trykk **Installer utvidelse / Install Plugin**. Godkjenn eventuelt varsel
+   om installasjon fra en lokal ZIP **bare dersom du stoler på utgiveren**.
+7. Lukk pluginadministratoren. Kontroller under **Installerte** at
+   **SOSI Survey – utkast** er aktivert. Start gjerne QGIS på nytt.
+
+## Slik åpner du pluginen
+
+- Klikk **SOSI Survey-ikonet** i QGIS-verktøylinjen, eller
+- Velg **Utvidelser → SOSI Survey → SOSI Survey**.
+- Finner du ikke ikonet? Se **Vis → Verktøylinjer → Utvidelser**.
+- Ved første oppstart kommer en **BETA-/ansvarsadvarsel**.
+  Les den. Fortsett bare hvis du ønsker å teste på eget ansvar.
+
+## Første test – med en ufarlig eksempelkopi
+
+1. **1. Start:** Velg *Åpne eksisterende SOSI-fil* eller
+   *Importer feltmålinger fra CSV/TXT*.
+2. **2. Datagrunnlag:** Velg en **syntetisk testfil** eller et separat
+   testlag i QGIS. Kontroller EPSG, enheter og høydegrunnlag.
+3. **3. SOSI-felt:** Koble riktige kildefelt og fyll inn nødvendige
+   attributter. Bruk hjelpeteksten – ikke gjett `OBJTYPE` eller kvalitet.
+4. **4. Kontroll:** Kjør intern kontroll. Rett **FEIL** før neste steg.
+   **ADVARSEL** kan gjelde foreløpig profil og manglende ekstern kontroll.
+5. **5. Eksport:** Eksporter en **SOSI-prøvefil** og kontrollrapport.
+   Du må selv kontrollere filen i et uavhengig SOSI-kontrollprogram før
+   eventuelt mottak/levering.
+
+**Viktig:** Pluginen er ikke ment som godkjent leveranseløsning for
+kommunale byggesaker, matrikkel eller FKB før korrekt spesifikasjon,
+innmåling og uavhengig kontroll er dokumentert.
+
+## Hvis installasjonen ikke virker
+
+- **Pluginen finnes ikke:** Se *Installerte*, og kryss av for aktivering.
+- **Mangler ikon:** Prøv å åpne pluginen fra **Utvidelser**-menyen.
+- **Feil etter oppdatering:** Deaktiver eller avinstaller den gamle
+  SOSI Survey-versjonen via pluginadministratoren, installer ny ZIP,
+  og start QGIS på nytt. Lagre egne QGIS-prosjekter først.
+- **Importfeil:** Sjekk at riktig fil er valgt og at prosjektets
+  koordinatsystem er dokumentert. Ikke anta at alle SOSI-dialekter støttes.
+- **Kontrollfeil:** Les kolonnen *Melding*. Eksporter ikke en fil
+  som har feil bare for å teste mottakersystemet.
+
+## Hvordan melde tilbake til testgruppen
+
+Oppgi QGIS-versjon, SOSI Survey-versjon, hvilken knapp/funksjon du testet,
+hva du forventet, og hva som faktisk skjedde. Ikke del originale
+SOSI-filer, CSV-feltmålinger, personopplysninger, matrikkel-/eiendomsdata,
+filstier eller urensede skjermbilder. Bruk egne konstruerte testeksempler.
+
+## Ansvar og lisens
+
+**Bruk på eget ansvar.** Programvaren leveres «som den er» (AS IS) uten
+garanti. Utvikler og bidragsytere fraskriver seg ansvar bare innenfor
+GPLv3 §§ 15–17 og gjeldende rett. Lovbestemt ansvar som ikke kan
+fraskrives, er ikke utelukket. Se DISCLAIMER.txt og LICENSE.

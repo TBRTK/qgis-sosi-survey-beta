@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "statnett_forberedelse",
+  "name": "Statnett – anleggsprofilutkast, instruks mangler",
+  "approved": false,
+  "require_z": true,
+  "compact_groups": {
+    "KVALITET": [
+      "MÅLEMETODE",
+      "NØYAKTIGHET",
+      "SYNBARHET",
+      "H-MÅLEMETODE",
+      "H-NØYAKTIGHET"
+    ]
+  },
+  "description": "Forberedelse for anleggsinnmåling. Offentlig Fosweb/GIS-veiledning gjelder kraftsystemrapportering, ikke en komplett as-built-instruks. Dens SOSI 3,4-omtale brukes ikke som standard for denne profilen.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "Objekttype",
+      "type": "text",
+      "required": true,
+      "max_length": 32
+    },
+    {
+      "path": "DATAFANGSTDATO",
+      "label": "Datafangstdato",
+      "type": "date",
+      "required": true
+    },
+    {
+      "path": "KVALITET.MÅLEMETODE",
+      "label": "Målemetode (kode)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.NØYAKTIGHET",
+      "label": "Nøyaktighet i plan (cm)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-MÅLEMETODE",
+      "label": "Høydemålemetode (kode)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-NØYAKTIGHET",
+      "label": "Høydenøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  ],
+  "recipient": "Statnett",
+  "delivery_status": "IKKE LEVERANSEKLAR: prosjektets as-built-spesifikasjon og mottaksoppsett mangler.",
+  "sources": [
+    {
+      "title": "Statnett – Kraftsystemdata, GIS-data",
+      "url": "https://www.statnett.no/for-aktorer-i-kraftbransjen/systemansvaret/fosweb/kraftsystemdata/",
+      "note": "Lest 2026-10-18. Annet leveranseformål enn detaljert anleggsinnmåling."
+    },
+    {
+      "title": "Geomatikk – Filkontroll",
+      "url": "https://geomatikk.no/netteiere-kommuner/gravemelding/filkontroll/",
+      "note": "Tjenesteleverandøren omtaler Statnett som bruker. Ingen offentlig validerings-API eller Statnett-regelpakke er verifisert."
+    }
+  ],
+  "unresolved": [
+    "Gjeldende leveranseinstruks og revisjon, godkjent eksempelfil og mottakerens testimport.",
+    "Objekttyper, påkrevde egenskaper, kodelister, geometri og relasjoner per objekttype.",
+    "Avtalt filformat/SOSI-versjon, objektkatalog med versjon og tilhørende kontrollfiler.",
+    "Prosjektets koordinatsystem, høydegrunnlag, nøyaktighetskrav og krav til vedlegg.",
+    "Avklar om prosjektet krever Geomatikk Filkontroll og hvilken kontrollkonfigurasjon som gjelder."
+  ],
+  "manual_checks": [
+    "Avklar anleggsinnmåling mot Fosweb-rapportering; disse er ikke samme leveranse."
+  ],
+  "reviewed_on": "2026-10-18",
+  "profile_revision": "2026-10-18.1"
+}

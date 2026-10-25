@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "arealplan_bevarende_utkast",
+  "name": "Arealplan – bevarende SOSI-feltkontroll",
+  "approved": false,
+  "require_z": false,
+  "description": "For eldre reguleringsplaner med 2D/3D-kurver, BUEP og FLATE. Kontroll av felt og bevaring av geometri; ikke standard- eller plangodkjenning. Bruk ikke som ny arealplanleveranse uten ekstern kontroll.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "SOSI-objekttype",
+      "type": "text",
+      "required": true,
+      "max_length": 96
+    },
+    {
+      "path": "REGFORM",
+      "label": "Reguleringsformål (original kode)",
+      "type": "integer",
+      "required": false,
+      "max_length": 100
+    },
+    {
+      "path": "VERTNIV",
+      "label": "Vertikalnivå",
+      "type": "integer",
+      "required": false
+    }
+  ],
+  "boundary_objtype": "RpFormålGrense"
+}

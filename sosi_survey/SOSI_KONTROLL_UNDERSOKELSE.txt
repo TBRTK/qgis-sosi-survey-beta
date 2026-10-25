@@ -1,0 +1,113 @@
+SOSI SURVEY – UNDERSØKELSE AV EKSTERN KONTROLL OG MOTTAKERPROFILER
+Undersøkt 18.10.2026. Status: implementasjonsgrunnlag, ikke mottaksgodkjenning.
+
+ANBEFALT LØSNING
+Bruk Kartverkets separat installerte SOSI-kontroll som ekstern kontrollmotor.
+Behold pluginens feltkontroll og XYZ/geometrivern. Kontroller den ferdig
+serialiserte filen mot riktig produktspesifikasjon og dens definisjonsfiler.
+Legg til egne dokumenterte geometriregler og manuell leveransekontroll.
+En feilfri SOSI-kontrollrapport betyr ikke at alle faglige/geometriske krav er
+oppfylt. Kartverket beskriver begrensninger og supplerende geometrikontroller.
+
+BEKREFTET
+Kartverket/Geonorge tilbyr SOSI-vis med SOSI-kontroll for Windows. Kontroll kan
+kjøres separat. Definisjoner må passe til valgt produkt og versjon. Registeret
+viser L700 som gyldig installasjonspakke, mens en eldre veiledningsside fortsatt
+omtaler 46B/2020. Pakkeversjon, kontrollmotor og DEF-versjon er forskjellige
+opplysninger og skal ikke blandes med SOSI-filformatets versjon.
+SOSI-realisering 5.0 beskriver objektkatalogangivelsen som grunnlag for
+innholdskontroll. DEF-filer kan genereres fra produktmodeller med egne verktøy.
+FYBA/GDAL-innlesing er ikke en erstatning for denne produktkontrollen.
+
+IKKE BEKREFTET
+Et stabilt offentlig REST-/bibliotek-API, dokumenterte batchparametre og
+maskinlesbare returkoder er ikke verifisert i de gjennomgåtte kildene.
+Separat kjøring er ikke dokumentasjon på et CLI-grensesnitt.
+Det er heller ikke etablert rett til å pakke kontrollprogrammet/DEF-filer inn i
+GPL-pluginen. At et program er gratis innebærer ikke en slik rett.
+Ingen offisiell kontrollmotor er installert eller integrert av denne endringen.
+
+KONKRET IMPLEMENTASJONSPLAN
+1. Verifiser tilgjengelig Windows-utgave, lisens, hjelp og støttet innkalling.
+   Avklar med Kartverket batch/API, oppsett og fullførings-/feilsignaler.
+2. Første mulige trinn er å åpne en ny kontrollkopi i separat SOSI-vis og kjøre
+   riktig kontrolloppsett der. Dette er en manuell overlevering, ikke automatisk
+   bestått kontroll. Ikke gjett kommandolinjeflagg eller baser godkjenning på at
+   en prosess avsluttes med kode 0.
+3. Når grensesnitt er dokumentert: start som separat prosess, med argumentliste
+   uten shell. Unngå å laste eventuell 32-bits DLL inn i 64-bits QGIS/Qt6.
+   Kjør uten å blokkere QGIS, med avbrudd/tidsgrense og synlig feilmelding.
+4. Registrer kontrollmotorversjon, profil-ID/revisjon, objektkatalog/versjon,
+   alle relevante DEF-avhengigheter med kontrollsummer, opsjoner, tidspunkt,
+   eksakt SOSI-filens SHA-256 og original kontrollrapport. Rapporter må ikke
+   gis gyldig status bare fordi brukeren velger en vilkårlig rapportfil.
+5. Vis separat status for feltkontroll, fil-/produktkontroll, geometri og
+   mottakerkontroll. Manglende DEF, avbrudd og ukjent rapportformat = ikke
+   kontrollert. Nye endringer gjør en tidligere kontroll foreldet.
+6. Les feil mot originalt SOSI-serienummer/objekt, ikke bare QGIS-feature-ID.
+   Behold original rapport ved siden av eksportfilen og vis feil i QGIS.
+7. Avtal et representativt, anonymisert godkjent datasett og negative testfiler
+   med mottaker før en profil omtales som klar for levering.
+
+BEGRENSNINGER I NÅVÆRENDE PLUGIN
+Import/eksport støtter et strengt utvalg av SOSI-geometrier, ikke alle historiske
+konstruksjoner. Bevarende eksport låser filhodet og oppgraderer ikke SOSI-versjon.
+Hvis originalen mangler OBJEKTKATALOG kan den ikke legges til i denne flyten
+ennå. En senere uttrykkelig filhoderetting i eksportkopien må bevare XYZ og
+referanser, dokumenteres og utløse ny kontroll. Generell versjonskonvertering
+og frie geometriendringer er egne utviklingsoppgaver.
+
+MOTTAKERSTATUS I 0.4.3
+BKK: egen forberedelsesprofil og kilde til leverandørsiden. Fullstendig instruks
+ligger ifølge BKK i Nettbibliotek (registrering) og REN (abonnement). Ingen
+beskyttede regler er kopiert eller antatt å gjelde uten prosjektbekreftelse.
+Eviny: eget utkast uten automatisk bruk av BKK-regler. Virksomhet/mottaker og
+anleggstype må avklares; en konsernprofil kan ikke dekke alle fagområder.
+Statnett: eget anleggsutkast. Fosweb/GIS-rapportering beskriver Shape og SOSI
+3,4, men er et annet formål enn detaljert as-built. Geomatikk beskriver en egen
+Filkontroll-tjeneste brukt av Statnett. Avtale/API og konkret regelsett mangler.
+Elvia: offentlig instruks beskriver Shape til GeoNIS. Kvalitetsfelt for nye
+trasearbeider kontrolleres: metode 11/14/81/96; kode 80 avvises for nye jobber;
+synbarhet 0–3 er påkrevd. Dette er en begrenset anvendelse av kapittel 3.
+Ingen automatisk tallkode-til-OBJTYPE-oversettelse eller Shape-eksport finnes.
+Generiske prøvefelt er fortsatt utviklingsvalg. Profilen er ikke leveranseklar.
+For alle fire lagres kildegrunnlag, status og mangelliste i kontrollrapporten.
+
+KILDER
+[1] Kartverket: Kontrollere arealplaner (og begrensninger i SOSI-kontroll)
+https://kartverket.no/geodataarbeid/planarbeid/kontrollere-arealplaner/
+[2] Geonorge: SOSI-vis med SOSI-kontroll, installasjon/DEF og separat kjøring
+https://www.geonorge.no/verktoy/verktoy-for-produktspesifikasjon/sosi-vis-med-sosi-kontroll/
+[3] Gjeldende programregister, L700
+https://register.geonorge.no/filer/sosi-format-verkt%C3%B8y/sosi-vis-med-sosi-kontroll
+[4] SOSI-realisering 5.0, særlig 7.3.1 OBJEKTKATALOG
+https://standarder.geonorge.no/sosi/del-1-generell-del/realisering-i-sosi-format/5.0/realisering-i-sosi-format-50-sosi-generell-del.pdf
+[5] Verktøy for modeller og DEF-generering
+https://www.geonorge.no/verktoy/verktoy-for-produktspesifikasjon/
+[6] BKK – For leverandører
+https://www.bkk.no/proff/for-leverandorer
+[7] Eviny – Om Eviny
+https://www.eviny.no/om-eviny
+[8] Statnett – Kraftsystemdata/GIS
+https://www.statnett.no/for-aktorer-i-kraftbransjen/systemansvaret/fosweb/kraftsystemdata/
+[9] Geomatikk – Filkontroll (leverandørens egen beskrivelse)
+https://geomatikk.no/netteiere-kommuner/gravemelding/filkontroll/
+[10] Elvia – Krav til Innmåling, offentlig lest i nettleser, revisjon 17.07.2025
+https://nettbiblioteket.elvia.no/doc/krav-til-innmling/
+Kapittel 2: https://nettbiblioteket.elvia.no/doc/krav-til-innmling/id6d21ee8a
+Kapittel 3: https://nettbiblioteket.elvia.no/doc/krav-til-innmling/id212dea4b
+
+FØR LEVERANSEPROFILENE KAN FERDIGSTILLES
+Innhent gjeldende instruks, kodeliste/objektkatalog, DEF-/mottakskonfigurasjon,
+filhode-/koordinatkrav og anonymisert akseptert eksempelfil for aktuell kontrakt.
+Ingen henvendelser til Kartverket eller netteierne er sendt fra denne chatten.
+
+Programvaren leveres «som den er» (AS IS), uten garanti. Ansvarsfraskrivelse
+og ansvarsbegrensning gjelder bare i det omfang GPLv3 §§15–17 og gjeldende rett
+tillater. Lovbestemt ansvar som ikke lovlig kan fraskrives, er ikke utelukket.
+Se LICENSE.
+
+The software is provided "AS IS", without warranty. Disclaimers and limitations
+of liability apply only to the extent permitted by GPLv3 sections 15–17 and
+applicable law. This does not exclude statutory liability that cannot lawfully
+be excluded. See LICENSE.

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "elvia_forberedelse",
+  "name": "Elvia – nye traseer, begrenset feltkontroll",
+  "approved": false,
+  "require_z": true,
+  "compact_groups": {
+    "KVALITET": [
+      "MÅLEMETODE",
+      "NØYAKTIGHET",
+      "SYNBARHET",
+      "H-MÅLEMETODE",
+      "H-NØYAKTIGHET"
+    ]
+  },
+  "description": "Offentlig innmålingsinstruks beskriver Shape til GeoNIS, ikke en ferdig SOSI-leveranse. Nye trasearbeider: målemetode 11/14/81/96 og synbarhet 0–3 kontrolleres. Resten er generiske prøvefelt, ikke komplette Elvia-krav. Z beholdes som prosjektkrav.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "Objekttype",
+      "type": "text",
+      "required": true,
+      "max_length": 32
+    },
+    {
+      "path": "DATAFANGSTDATO",
+      "label": "Datafangstdato",
+      "type": "date",
+      "required": true
+    },
+    {
+      "path": "KVALITET.MÅLEMETODE",
+      "label": "Målemetode (kode)",
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "enum": [
+        11,
+        14,
+        81,
+        96
+      ],
+      "help": "Nye trasearbeider: 11 totalstasjon, 14 ortogonalmetode, 81 montørregistrering i relevant tilfelle, 96 RTK. Velg faktisk metode og riktig virkeområde. Kode 80 er ikke tillatt på nye jobber. Instrumentmodellen alene avgjør ikke."
+    },
+    {
+      "path": "KVALITET.NØYAKTIGHET",
+      "label": "Nøyaktighet i plan (cm)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.SYNBARHET",
+      "label": "Synbarhet",
+      "type": "integer",
+      "required": true,
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "help": "Elvias kapittel 3.3: 0 synlig/åpent, 1 opplyttet, 2 sandet grøft, 3 anvist. Velg tilstanden ved måling. Kode 0 fylles ikke automatisk."
+    },
+    {
+      "path": "KVALITET.H-MÅLEMETODE",
+      "label": "Høydemålemetode (kode)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-NØYAKTIGHET",
+      "label": "Høydenøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  ],
+  "recipient": "Elvia",
+  "delivery_status": "IKKE LEVERANSEKLAR: Shape er beskrevet i kilden; SOSI som leveranse må avtales særskilt.",
+  "sources": [
+    {
+      "title": "Elvia – Krav til Innmåling",
+      "url": "https://nettbiblioteket.elvia.no/doc/krav-til-innmling/",
+      "note": "Lest 2026-10-18, synlig revisjon 17.07.2025. Kapittel 1–3. Offentlig nettside med dynamisk kapittelinnhold."
+    }
+  ],
+  "unresolved": [
+    "Avklar Shape/SOSI og mottakers importfelt. Ingen Shape-eksport er implementert her.",
+    "Bekreft hele instruksens gyldighet for prosjekt og nettområde, særlig lokale unntak og stikkledninger.",
+    "Objekttyper og SOSI-feltnavn: eldre numeriske konverteringskoder er ikke OBJTYPE-navn og oversettes ikke automatisk.",
+    "Koordinatsystem, høydekrav og kontrolloppsett må avklares; kilden gir ikke grunnlag for et generelt NN2000/UTM-valg."
+  ],
+  "manual_checks": [
+    "Vurder dokumentert målenøyaktighet og punktetthet etter anleggstype og lokale unntak. En felttallverdi beviser ikke fysisk nøyaktighet.",
+    "Kontroller grøftetilstand, bredde, endepunkter, bilder og kobling til eksisterende nett i mottakers arbeidsflyt."
+  ],
+  "reviewed_on": "2026-10-18",
+  "profile_revision": "2026-10-18.1"
+}

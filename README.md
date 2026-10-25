@@ -4,17 +4,18 @@
 for import, feltkontroll og prøveeksport av SOSI. Den er ikke sertifisert
 eller godkjent av Kartverket, QGIS eller noen kommune.
 
-## Kom i gang
+## Last ned versjon 0.5.10
 
-Se intro på youtube https://youtu.be/IsYCNBQ8hkk?si=oaQAC-hcu8RcjLrd
+- **[Last ned installasjons-ZIP](releases/sosi_survey-0.5.10.zip)** – velg «Download raw» på GitHub. Bruk denne filen i QGIS.
+- **[Se hele kildekoden](sosi_survey/)** – 18 Python-filer, profiler og dokumentasjon.
+- **[Installasjon steg for steg](INSTALLASJON.md)** – for nybegynnere.
 
-Begynn med **[Installasjon – steg for steg](INSTALLASJON.md)**.
-Bruk QGIS 3.44 til den første testen. Installer ferdig
-`sosi_survey-0.5.10.zip` via QGIS **Utvidelser → Administrer
-og installer utvidelser → Installer fra ZIP**. ZIP-en med hele
-GitHub-repoet («Code → Download ZIP») er **ikke** pluginens
-installasjonsfil. Last ned plugin-ZIP fra utgiverens kontrollerte
-release eller testgruppe.
+[Se introduksjonsvideoen](https://youtu.be/IsYCNBQ8hkk?si=oaQAC-hcu8RcjLrd).
+
+Anbefalt testmiljø er QGIS 3.44. Funksjonene er fortsatt eksperimentelle.
+GitHubs «Code → Download ZIP» inneholder hele repositoryet og er **ikke**
+pluginens installasjonsfil. Pluginen er ikke publisert i QGIS sin offisielle
+utvidelseskatalog.
 
 ## Hva kan pluginen gjøre?
 

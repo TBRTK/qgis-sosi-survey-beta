@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bygg_anlegg_utkast",
+  "name": "Bygg/anlegg – foreløpig 3D-profil",
+  "approved": false,
+  "require_z": true,
+  "compact_groups": {"KVALITET": ["MÅLEMETODE", "NØYAKTIGHET", "SYNBARHET", "H-MÅLEMETODE", "H-NØYAKTIGHET"]},
+  "description": "Prøveprofil for innmålte punkter/linjer. Påkrevde felt nedenfor er prøveprofilens valg, ikke en generell liste over SOSI-krav. Ingen godkjent objekttype- eller målemetodekodeliste er lagt inn.",
+  "fields": [
+    {"path": "OBJTYPE", "label": "Objekttype", "type": "text", "required": true, "max_length": 32},
+    {"path": "DATAFANGSTDATO", "label": "Datafangstdato", "type": "date", "required": true},
+    {"path": "KVALITET.MÅLEMETODE", "label": "Målemetode (kode)", "type": "integer", "required": true, "min": 0},
+    {"path": "KVALITET.NØYAKTIGHET", "label": "Nøyaktighet i plan (cm)", "type": "integer", "required": true, "min": 0},
+    {"path": "KVALITET.H-MÅLEMETODE", "label": "Høydemålemetode (kode)", "type": "integer", "required": false, "min": 0},
+    {"path": "KVALITET.H-NØYAKTIGHET", "label": "Høydenøyaktighet (cm)", "type": "integer", "required": false, "min": 0}
+  ]
+}

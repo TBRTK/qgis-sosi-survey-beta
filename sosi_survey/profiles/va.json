@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "va_utkast",
+  "name": "VA – foreløpig 3D-profil",
+  "approved": false,
+  "require_z": true,
+  "compact_groups": {
+    "KVALITET": [
+      "MÅLEMETODE",
+      "NØYAKTIGHET",
+      "SYNBARHET",
+      "H-MÅLEMETODE",
+      "H-NØYAKTIGHET"
+    ]
+  },
+  "description": "VA-sjablong med samme minimale prøvefelt som bygg/anlegg. Ikke en VA-produktspesifikasjon. Funksjon, materiale, dimensjon, objekttyper og forbindelser må tilpasses ledningseiers krav.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "Objekttype",
+      "type": "text",
+      "required": true,
+      "max_length": 32
+    },
+    {
+      "path": "DATAFANGSTDATO",
+      "label": "Datafangstdato",
+      "type": "date",
+      "required": true
+    },
+    {
+      "path": "KVALITET.MÅLEMETODE",
+      "label": "Målemetode (kode)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.NØYAKTIGHET",
+      "label": "Nøyaktighet i plan (cm)",
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-MÅLEMETODE",
+      "label": "Høydemålemetode (kode)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-NØYAKTIGHET",
+      "label": "Høydenøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  ]
+}

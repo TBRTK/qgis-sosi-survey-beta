@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "bygning_plassering_utkast",
+  "name": "Bygning – innmålt plassering (ikke FKB-godkjent)",
+  "approved": false,
+  "require_z": false,
+  "description": "Dokumentasjonsutkast for innmålt bygningsomriss. Velg hva som faktisk ble målt (grunnmur, fasadeliv, takkant), og avklar mottakers krav før SOSI. Grunnmur for ferdig bygg er ikke automatisk riktig FKB-objekttype. Ny polygoneksport holdes blokkert inntil korrekt grense- og objektkatalog er dokumentert.",
+  "fields": [
+    {
+      "path": "OBJTYPE",
+      "label": "SOSI-objekttype (må bekreftes)",
+      "type": "text",
+      "required": true,
+      "max_length": 96,
+      "help": "Bruk eksakt objekttype fra aktuell leveransespesifikasjon. Ikke anta Grunnmur for alle ferdige bygg."
+    },
+    {
+      "path": "DATAFANGSTDATO",
+      "label": "Dato for innmåling",
+      "type": "date",
+      "required": false
+    },
+    {
+      "path": "KVALITET.MÅLEMETODE",
+      "label": "Målemetodekode",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.NØYAKTIGHET",
+      "label": "Dokumentert plan-nøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-MÅLEMETODE",
+      "label": "Høydemålemetodekode",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    {
+      "path": "KVALITET.H-NØYAKTIGHET",
+      "label": "Dokumentert høydenøyaktighet (cm)",
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  ],
+  "sources": [
+    {
+      "title": "FKB-Bygning 5.1.1",
+      "url": "https://dokument.geonorge.no/produktspesifikasjoner/fkb-bygning/Versjon%205.1.1/index.html",
+      "note": "Grunnmur, Fasadeliv, Takkant og Bygning har forskjellige betingelser."
+    },
+    {
+      "title": "SAK10 § 8-1",
+      "url": "https://www.dibk.no/regelverk/sak/2/8/8-1",
+      "note": "Dokumentasjonskrav ved ferdigstillelse må ses mot vedtak og kommune."
+    }
+  ],
+  "unresolved": [
+    "Kommunen eller FKB-mottakeren må bekrefte objektkatalog, geometri, kvalitet og plasseringsreferanse før godkjent SOSI-leveranse."
+  ],
+  "manual_checks": [
+    "Kontroller original punktsky/CSV/GPKG og sporingsrapport; kontroller hele bygningsomrisset mot godkjent situasjonsplan.",
+    "Ingen automatisk transformasjon av høyder eller koordinatsystem utføres."
+  ]
+}

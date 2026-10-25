@@ -5,28 +5,24 @@ av Kartverket eller QGIS. Intern kontroll erstatter ikke faglig SOSI-kontroll.
 Les DISCLAIMER.txt før bruk. Prøv først med syntetiske testdata.
 
 ## Du trenger
-- En PC med **QGIS 3.44** (anbefalt til testgruppen, f.eks. 3.44.7).
-- Pluginfilen `sosi_survey-0.5.10.zip` fra utgiveren/testgruppen.
-- Du trenger **ikke** GitHub-konto for å installere en ZIP som er delt direkte.
 
-QGIS kan lastes ned fra https://qgis.org/download/.
-QGIS 4 kan være mulig, men alle funksjoner er ikke ferdig testet der.
+- QGIS 3.44, for eksempel 3.44.7 (anbefalt for første test).
+- **[sosi_survey-0.5.10.zip](releases/sosi_survey-0.5.10.zip)**.
+  Klikk «Download raw» på GitHub og lagre filen uten å pakke den ut.
+- Ingen GitHub-konto er nødvendig for å laste ned den offentlige ZIP-filen.
+
+QGIS: https://qgis.org/download/. Støtte for QGIS 4 er ikke ferdig verifisert.
 
 ## Installer i QGIS – steg for steg
 
-1. **Last ned riktig ZIP.** Filen skal hete `sosi_survey-0.5.10.zip`.
-   *Ikke* velg GitHubs «Code → Download ZIP» (det er kildekoden,
-   ikke pluginens ferdig kontrollerte installasjonspakke).
-2. **Har du fått `sosi-survey-qgis-test.zip` fra GitHub Actions?**
-   Pakk ut akkurat denne **ytterste** ZIP-en. Da finner du
-   `sosi_survey-0.5.10.zip` inni. **Ikke pakk ut den innerste ZIP-en.**
-3. **Start QGIS.** Åpne menyen **Utvidelser → Administrer og installer utvidelser**.
-4. Velg **Installer fra ZIP** i menyen på venstre side.
-5. Trykk **… / Bla gjennom** og velg `sosi_survey-0.5.10.zip`.
-6. Trykk **Installer utvidelse / Install Plugin**. Godkjenn eventuelt varsel
-   om installasjon fra en lokal ZIP **bare dersom du stoler på utgiveren**.
-7. Lukk pluginadministratoren. Kontroller under **Installerte** at
-   **SOSI Survey – utkast** er aktivert. Start gjerne QGIS på nytt.
+1. Last ned **sosi_survey-0.5.10.zip** fra lenken ovenfor.
+   Ikke bruk GitHubs «Code → Download ZIP».
+2. La plugin-ZIP-filen være pakket.
+3. Start QGIS og velg **Utvidelser → Administrer og installer utvidelser**.
+4. Velg **Installer fra ZIP** til venstre.
+5. Trykk **Bla gjennom** og velg filen `sosi_survey-0.5.10.zip`.
+6. Trykk **Installer utvidelse**. Godkjenn varselet bare dersom du stoler på utgiveren.
+7. Under **Installerte**: Aktiver **SOSI Survey – utkast** og start eventuelt QGIS på nytt.
 
 ## Slik åpner du pluginen
 

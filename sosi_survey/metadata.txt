@@ -1,0 +1,16 @@
+[general]
+name=SOSI Survey – utkast
+description=Importer og kontroller SOSI i 2D og 3D med bevarende eksport og automatisk gjeninnlesing.
+version=0.5.10
+qgisMinimumVersion=3.44
+qgisMaximumVersion=4.99
+author=Tore Berthelsen
+email=
+about=BETA. Brukes på eget ansvar og uten garanti (GPLv3 §§ 15–17, så langt loven tillater). Ikke sertifisert av Kartverket/QGIS. Intern delkontroll erstatter ikke fagkontroll eller mottakergodkjenning. Se README og DISCLAIMER.
+category=Vector
+icon=icon.svg
+experimental=True
+donate=https://buymeacoffee.com/tb_rtk
+homepage=https://www.3dmapper.no
+repository=https://github.com/TBRTK/qgis-sosi-survey-beta
+hasProcessingProvider=False
